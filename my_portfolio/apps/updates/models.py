@@ -1,4 +1,3 @@
-# my_portfolio/apps/updates/models.py
 from django.db import models
 
 class Update(models.Model):

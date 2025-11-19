@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Updates - My Portfolio{% endblock %}
+
+{% block content %}
+<h1>Latest Updates</h1>
+
+{% if updates %}
+    <div class="updates-list">
+        {% for update in updates %}
+            <article class="update-item">
+                <h2>{{ update.title }}</h2>
+                <small>{{ update.timestamp|date:"F d, Y" }}</small>
+                <p>{{ update.content }}</p>
+            </article>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>No updates found.</p>
+{% endif %}
+{% endblock %}
