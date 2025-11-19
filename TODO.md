@@ -1,0 +1,10 @@
+- [ ] Create contact app files: __init__.py, admin.py, apps.py, forms.py, models.py, tests.py, urls.py, views.py
+- [ ] Create contact template: contact.html
+- [ ] Create core app files: __init__.py, admin.py, apps.py, models.py, tests.py, urls.py, views.py
+- [ ] Create core templates: home.html, projects.html
+- [ ] Create updates app files: __init__.py, admin.py, apps.py, models.py, tests.py, urls.py, views.py
+- [ ] Create updates template: update_list.html
+- [ ] Create config files: __init__.py, asgi.py, settings.py, urls.py, wsgi.py
+- [ ] Create static files: style.css, script.js
+- [ ] Create global template: base.html
+- [ ] Update my_portfolio/TODO.md to mark tasks as completed

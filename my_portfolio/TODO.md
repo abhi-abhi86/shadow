@@ -1,0 +1,13 @@
+- [x] Create .gitignore
+- [x] Create manage.py
+- [x] Create Procfile
+- [x] Create requirements.txt
+- [x] Create contact app files: __init__.py, admin.py, apps.py, forms.py, models.py, tests.py, urls.py, views.py
+- [x] Create contact template: contact.html
+- [x] Create core app files: __init__.py, admin.py, apps.py, models.py, tests.py, urls.py, views.py
+- [x] Create core templates: home.html, projects.html
+- [x] Create updates app files: __init__.py, admin.py, apps.py, models.py, tests.py, urls.py, views.py
+- [x] Create updates template: update_list.html
+- [x] Create config files: __init__.py, asgi.py, settings.py, urls.py, wsgi.py
+- [x] Create static files: style.css, script.js
+- [x] Create global template: base.html
