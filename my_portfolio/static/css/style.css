@@ -150,7 +150,7 @@ p {
 }
 
 .animate-fade-up {
-    animation: fadeInUp 0.8s var(--transition-smooth) forwards;
+    animation: fadeInUp 0.5s var(--transition-smooth) forwards;
 }
 
 .delay-1 {
@@ -169,7 +169,7 @@ p {
 .hidden-scroll {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.8s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .show-scroll {
