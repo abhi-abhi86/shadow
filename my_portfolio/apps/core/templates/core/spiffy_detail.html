@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Spiffy Ultron Zero | My Portfolio{% endblock %}
+
+{% block content %}
+<section style="padding: 120px 0 60px;">
+    <div class="container">
+        <!-- Header -->
+        <div class="animate-fade-up">
+            <a href="{% url 'core:projects' %}" class="btn btn-outline"
+                style="padding: 8px 20px; font-size: 0.9rem; margin-bottom: 30px;">← Back to Projects</a>
+            <h1 class="text-gradient" style="font-size: 3rem; margin-bottom: 10px;">Spiffy Ultron Zero V22</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+                A complete, high-performance security and utility system. 11/11 Components active. 6-10x C++
+                Acceleration.
+            </p>
+            <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">Python</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">C++</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">Rust</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">Async
+                    I/O</span>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; margin-top: 60px;">
+
+            <!-- Left Column: Details -->
+            <div class="animate-fade-up delay-1">
+
+                <!-- System Status -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px;">System Efficiency</h2>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px;">
+                            <h4 style="margin-bottom: 5px; color: #00b894;">6-10x Faster</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">C++ Accelerators Built</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px;">
+                            <h4 style="margin-bottom: 5px; color: #6c5ce7;">15 Modules</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Security Ready</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px;">
+                            <h4 style="margin-bottom: 5px; color: #0984e3;">2-3x Faster</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Async I/O Pool</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px;">
+                            <h4 style="margin-bottom: 5px; color: #fab1a0;">3-5x Faster</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Rust Crypto (Optional)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modules Section -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Active Modules</h2>
+
+                    <h3 style="font-size: 1.2rem; color: #ff7675; margin-bottom: 10px;">🔴 Offensive (6 Modules)</h3>
+                    <ul
+                        style="list-style: none; padding: 0; margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <li>• WIFI_RADAR</li>
+                        <li>• AUTO_EXPLOIT</li>
+                        <li>• SERVICE_STRESSOR</li>
+                        <li>• DNS_ENUM</li>
+                        <li>• PASSWORD_CRACKER</li>
+                        <li>• VULN_SCANNER</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.2rem; color: #74b9ff; margin-bottom: 10px;">🔵 Defensive (5 Modules)</h3>
+                    <ul
+                        style="list-style: none; padding: 0; margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <li>• MITM_SENTINEL</li>
+                        <li>• SSL_TLS_AUDIT</li>
+                        <li>• BREACH_SENSE</li>
+                        <li>• PACKET_SNIFFER</li>
+                        <li>• BLUETOOTH_SCAN</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.2rem; color: #55efc4; margin-bottom: 10px;">🟢 Utility</h3>
+                    <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <li>• ENCRYPTED_VAULT (AES-256)</li>
+                        <li>• BIFROST_CHAT (P2P)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Quick Info -->
+            <div class="animate-fade-up delay-2">
+                <div class="glass-panel" style="padding: 30px; position: sticky; top: 100px;">
+                    <h3 style="margin-bottom: 20px;">Project Info</h3>
+                    <div style="margin-bottom: 20px;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Type</span>
+                        <span>Security Framework</span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Languages</span>
+                        <span>Python, C++, Rust, Bash</span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <span
+                            style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Architecture</span>
+                        <span>Modular / Async I/O</span>
+                    </div>
+                    <a href="https://github.com/abhi-abhi86/spiffy.git" target="_blank" class="btn btn-primary"
+                        style="width: 100%; text-align: center;">View on GitHub</a>
+
+                    <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 20px 0;">
+
+                    <h4 style="margin-bottom: 10px;">Quick Start</h4>
+                    <pre
+                        style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; font-size: 0.8rem; overflow-x: auto; color: var(--text-secondary);">
+cd spiffy
+./spiffy_runner.sh
+
+# Select [1] Interactive
+# Select [2] Quick Scan
+</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

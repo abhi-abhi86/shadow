@@ -1,21 +1,39 @@
 {% extends 'base.html' %}
 
-{% block title %}Updates - My Portfolio{% endblock %}
+{% block title %}Updates | My Portfolio{% endblock %}
 
 {% block content %}
-<h1>Latest Updates</h1>
+<section style="padding: 120px 0;">
+    <div class="container">
+        <div class="animate-fade-up">
+            <h1>Latest Updates</h1>
+            <p>Stay tuned with my latest work and announcements.</p>
+        </div>
 
-{% if updates %}
-    <div class="updates-list">
-        {% for update in updates %}
-            <article class="update-item">
-                <h2>{{ update.title }}</h2>
-                <small>{{ update.timestamp|date:"F d, Y" }}</small>
-                <p>{{ update.content }}</p>
+        <div style="max-width: 800px; margin-top: 60px;">
+            {% if updates %}
+            {% for update in updates %}
+            <article class="glass-panel hidden-scroll"
+                style="padding: 30px; margin-bottom: 30px; display: flex; gap: 20px; align-items: flex-start;">
+                <div
+                    style="min-width: 80px; text-align: center; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;">
+                    <span style="display: block; font-size: 1.5rem; font-weight: 700; color: var(--accent-primary);">{{
+                        update.timestamp|date:"d" }}</span>
+                    <span style="display: block; font-size: 0.8rem; text-transform: uppercase;">{{
+                        update.timestamp|date:"M" }}</span>
+                </div>
+                <div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 10px;">{{ update.title }}</h2>
+                    <p style="margin-bottom: 0;">{{ update.content }}</p>
+                </div>
             </article>
-        {% endfor %}
+            {% endfor %}
+            {% else %}
+            <div class="glass-panel" style="padding: 40px; text-align: center;">
+                <p>No updates found yet. Check back soon!</p>
+            </div>
+            {% endif %}
+        </div>
     </div>
-{% else %}
-    <p>No updates found.</p>
-{% endif %}
+</section>
 {% endblock %}

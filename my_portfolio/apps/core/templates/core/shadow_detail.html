@@ -1,0 +1,142 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Shadow Portfolio | My Portfolio{% endblock %}
+
+{% block content %}
+<section style="padding: 120px 0 60px;">
+    <div class="container">
+        <!-- Header -->
+        <div class="animate-fade-up">
+            <a href="{% url 'core:projects' %}" class="btn btn-outline"
+                style="padding: 8px 20px; font-size: 0.9rem; margin-bottom: 30px;">← Back to Projects</a>
+            <h1 class="text-gradient" style="font-size: 3rem; margin-bottom: 10px;">Shadow</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+                A comprehensive project showcase and personal identity platform. Built with modern web technologies to
+                be fast, responsive, and aesthetically pleasing.
+            </p>
+            <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">Django
+                    4.2</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">Vanilla
+                    CSS</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">Glassmorphism</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">Responsive</span>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; margin-top: 60px;">
+
+            <!-- Left Column: Details -->
+            <div class="animate-fade-up delay-1">
+
+                <!-- Project Overview -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px;">The Vision</h2>
+                    <p>
+                        "Shadow" represents my digital identity. It's not just a collection of links, but a crafted
+                        experience that reflects my attention to detail and passion for modern web development. The goal
+                        was to build a portfolio that stands out through its aesthetics and smooth user interactions.
+                    </p>
+                    <p>
+                        Unlike generic templates, this project helps me demonstrate my ability to build custom design
+                        systems from scratch using vanilla CSS, without relying on heavy frameworks like Bootstrap or
+                        Tailwind for the core look.
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Key Features</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Custom Design System:</strong> A unique CSS variable-based system for colors,
+                                typography, and spacing.</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Glassmorphism UI:</strong> Modern, frosted-glass effects using
+                                `backdrop-filter` for a premium feel.</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Dynamic Animations:</strong> Subtle scroll-triggered fade-ins and interactive
+                                hover states.</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Responsive Grid:</strong> A layout that adapts seamlessly from desktop
+                                monitors to mobile screens.</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Scalable Architecture:</strong> Built on Django's app-based structure for easy
+                                expansion (e.g., adding Blog or Updates apps).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tech Stack Detail -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Under the Hood</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div>
+                            <h4 style="color: var(--text-primary); margin-bottom: 5px;">Backend</h4>
+                            <p style="font-size: 0.9rem;">Django 4.2 serves as the robust backbone, handling routing,
+                                templating, and data management.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--text-primary); margin-bottom: 5px;">Frontend</h4>
+                            <p style="font-size: 0.9rem;">HTML5, CSS3 (Variables, Flexbox, Grid), and minimal JavaScript
+                                for interactions.</p>
+                        </div>
+                        <div>
+                            <h4 style="color: var(--text-primary); margin-bottom: 5px;">Deployment</h4>
+                            <p style="font-size: 0.9rem;">WSGI compatible, ready for deployment on platforms like
+                                Heroku, AWS, or DigitalOcean.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Quick Info -->
+            <div class="animate-fade-up delay-2">
+                <div class="glass-panel" style="padding: 30px; position: sticky; top: 100px;">
+                    <h3 style="margin-bottom: 20px;">Project Info</h3>
+                    <div style="margin-bottom: 20px;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Type</span>
+                        <span>Personal Portfolio</span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Role</span>
+                        <span>Full Stack Developer</span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Year</span>
+                        <span>2024 - Present</span>
+                    </div>
+                    <a href="https://github.com/abhi-abhi86/shadow.git" target="_blank" class="btn btn-primary"
+                        style="width: 100%; text-align: center;">View on GitHub</a>
+
+                    <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 20px 0;">
+
+                    <h4 style="margin-bottom: 10px;">Run Locally</h4>
+                    <pre
+                        style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; font-size: 0.8rem; overflow-x: auto; color: var(--text-secondary);">
+git clone .../shadow.git
+cd shadow
+pip install -r requirements.txt
+python manage.py runserver</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

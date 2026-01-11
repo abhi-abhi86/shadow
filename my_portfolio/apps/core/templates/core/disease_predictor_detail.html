@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Disease Predictor | My Portfolio{% endblock %}
+
+{% block content %}
+<section style="padding: 120px 0 60px;">
+    <div class="container">
+        <!-- Header -->
+        <div class="animate-fade-up">
+            <a href="{% url 'core:projects' %}" class="btn btn-outline"
+                style="padding: 8px 20px; font-size: 0.9rem; margin-bottom: 30px;">← Back to Projects</a>
+            <h1 class="text-gradient" style="font-size: 3rem; margin-bottom: 10px;">Multi-Species Disease Detection</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 800px;">
+                AI-powered disease detection for Plants, Humans, and Animals. An offline-first, privacy-focused desktop
+                application built with PyTorch and PySide6.
+            </p>
+            <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap;">
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">Python</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">PySide6</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">PyTorch</span>
+                <span class="glass-panel"
+                    style="padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; color: var(--accent-primary);">MIT
+                    License</span>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; margin-top: 60px;">
+
+            <!-- Left Column: Details -->
+            <div class="animate-fade-up delay-1">
+
+                <!-- Features -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Key Features</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Multi-Species Support:</strong> Detect diseases in plants, humans, and animals
+                                from one application.</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Offline-First:</strong> Works completely offline, no internet required after
+                                setup.</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Privacy-Focused:</strong> All data stays on your device.</span>
+                        </li>
+                        <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+                            <span style="color: var(--accent-primary); margin-right: 10px;">✅</span>
+                            <span><strong>Research Integration:</strong> Automatic Wikipedia and PubMed research
+                                fetching.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Capabilities -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px;">Core Capabilities</h2>
+                    <p>Powered by a custom-trained MobilenetV2 model validated on 26 disease classes.</p>
+                    <div
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px;">
+                            <h4 style="margin-bottom: 5px; color: var(--text-primary);">AI Chatbot</h4>
+                            <p style="font-size: 0.9rem;">Interactive guidance for disease info.</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px;">
+                            <h4 style="margin-bottom: 5px; color: var(--text-primary);">Report Gen</h4>
+                            <p style="font-size: 0.9rem;">Create detailed PDF & HTML reports.</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px;">
+                            <h4 style="margin-bottom: 5px; color: var(--text-primary);">Smart Validation</h4>
+                            <p style="font-size: 0.9rem;">Rejects invalid images automatically.</p>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px;">
+                            <h4 style="margin-bottom: 5px; color: var(--text-primary);">Geo Mapping</h4>
+                            <p style="font-size: 0.9rem;">Visualize disease locations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Detail -->
+                <div class="glass-panel" style="padding: 30px; margin-bottom: 30px;">
+                    <h2 style="font-size: 1.8rem; margin-bottom: 20px;">How It Works</h2>
+                    <div
+                        style="background: #000; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; overflow-x: auto;">
+                        Image Upload → Validation → Preprocessing → AI Inference → Results
+                        ↓ ↓ ↓ ↓ ↓
+                        User Input Reject Invalid Resize/Norm MobileNetV2 Display
+                        (diagrams/text) Transform Prediction + Research
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Quick Info -->
+            <div class="animate-fade-up delay-2">
+                <div class="glass-panel" style="padding: 30px; position: sticky; top: 100px;">
+                    <h3 style="margin-bottom: 20px;">Project Info</h3>
+                    <div style="margin-bottom: 20px;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Role</span>
+                        <span>Lead Developer</span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Tech Stack</span>
+                        <span>Python, PySide6, PyTorch, PIL, Folium</span>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <span style="display: block; font-size: 0.8rem; color: var(--text-secondary);">Key
+                            Library</span>
+                        <span>MobileNetV2 (Deep Learning)</span>
+                    </div>
+                    <a href="https://github.com/abhi-abhi86/disease-predictor.git" target="_blank"
+                        class="btn btn-primary" style="width: 100%; text-align: center;">View on GitHub</a>
+
+                    <hr style="border: 0; border-top: 1px solid var(--glass-border); margin: 20px 0;">
+
+                    <h4 style="margin-bottom: 10px;">Installation</h4>
+                    <pre
+                        style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 5px; font-size: 0.8rem; overflow-x: auto; color: var(--text-secondary);">
+git clone https://github.com/abhi-abhi86/disease-predictor.git
+cd disease-predictor
+python3 -m venv venv
+source venv/bin/activate
+pip install -r comprehensive_requirements.txt
+./run_app.sh</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

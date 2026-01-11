@@ -1,8 +1,98 @@
 {% extends 'base.html' %}
 
-{% block title %}Projects - My Portfolio{% endblock %}
+{% block title %}Projects | My Portfolio{% endblock %}
 
 {% block content %}
-<h1>My Projects</h1>
-<p>Here are some of my projects.</p>
+<section style="padding: 120px 0 60px;">
+    <div class="container">
+        <div class="animate-fade-up">
+            <h1>My Projects</h1>
+            <p style="max-width: 600px;">Here are my two major projects. They demonstrate my skills in full-stack
+                development and system architecture.</p>
+        </div>
+
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-top: 60px;">
+
+            <!-- Shadow Project -->
+            <article class="glass-panel hidden-scroll" style="transition-delay: 0ms;">
+                <div
+                    style="height: 200px; background: linear-gradient(45deg, #2d3436, #000000); border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem; font-weight: 700; color: white; letter-spacing: 4px;">SHADOW</span>
+                </div>
+                <div style="padding: 24px;">
+                    <span
+                        style="font-size: 0.8rem; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Portfolio
+                        & Identity</span>
+                    <h3 style="margin: 10px 0;">Shadow</h3>
+                    <p style="font-size: 0.95rem;">A comprehensive project showcase and personal identity platform.
+                        Built with modern web technologies.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 0.8rem; opacity: 0.6; margin-right: 15px;">#django</span>
+                        <span style="font-size: 0.8rem; opacity: 0.6;">#css</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 20px;">
+                        <a href="{% url 'core:shadow_detail' %}" class="btn btn-primary"
+                            style="flex: 1; text-align: center; padding: 12px 0;">View Details</a>
+                        <a href="https://github.com/abhi-abhi86/shadow.git" target="_blank" class="btn btn-outline"
+                            style="flex: 1; text-align: center; padding: 12px 0;">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Spiffy Project -->
+            <article class="glass-panel hidden-scroll" style="transition-delay: 100ms;">
+                <div
+                    style="height: 200px; background: linear-gradient(45deg, #6c5ce7, #a29bfe); border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 2rem; font-weight: 700; color: white; letter-spacing: 4px;">SPIFFY</span>
+                </div>
+                <div style="padding: 24px;">
+                    <span
+                        style="font-size: 0.8rem; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Application</span>
+                    <h3 style="margin: 10px 0;">Spiffy</h3>
+                    <p style="font-size: 0.95rem;">An innovative application focused on user experience and seamless
+                        functionality.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 0.8rem; opacity: 0.6; margin-right: 15px;">#development</span>
+                        <span style="font-size: 0.8rem; opacity: 0.6;">#software</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 20px;">
+                        <a href="{% url 'core:spiffy_detail' %}" class="btn btn-primary"
+                            style="flex: 1; text-align: center; padding: 12px 0;">View Details</a>
+                        <a href="https://github.com/abhi-abhi86/spiffy.git" target="_blank" class="btn btn-outline"
+                            style="flex: 1; text-align: center; padding: 12px 0;">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Disease Predictor Project -->
+            <article class="glass-panel hidden-scroll" style="transition-delay: 200ms;">
+                <div
+                    style="height: 200px; background: linear-gradient(45deg, #00b894, #55efc4); border-bottom: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center;">
+                    <span
+                        style="font-size: 1.8rem; font-weight: 700; color: white; letter-spacing: 3px; text-align: center;">DISEASE<br>PREDICTOR</span>
+                </div>
+                <div style="padding: 24px;">
+                    <span
+                        style="font-size: 0.8rem; color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Machine
+                        Learning</span>
+                    <h3 style="margin: 10px 0;">Disease Predictor</h3>
+                    <p style="font-size: 0.95rem;">A healthcare application utilizing machine learning algorithms to
+                        predict potential diseases.</p>
+                    <div style="margin: 20px 0;">
+                        <span style="font-size: 0.8rem; opacity: 0.6; margin-right: 15px;">#python</span>
+                        <span style="font-size: 0.8rem; opacity: 0.6;">#ai</span>
+                    </div>
+                    <div style="display: flex; gap: 10px; margin-top: 20px;">
+                        <a href="{% url 'core:disease_predictor_detail' %}" class="btn btn-primary"
+                            style="flex: 1; text-align: center; padding: 12px 0;">View Details</a>
+                        <a href="https://github.com/abhi-abhi86/disease-predictor.git" target="_blank"
+                            class="btn btn-outline" style="flex: 1; text-align: center; padding: 12px 0;">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
 {% endblock %}

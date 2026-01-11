@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact</title>
-</head>
-<body>
-    <h1>Contact Me</h1>
-    <p>This is the contact page.</p>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Contact | My Portfolio{% endblock %}
+
+{% block content %}
+<section style="padding: 120px 0;">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;" class="animate-fade-up">
+            <h1>Get In Touch</h1>
+            <p style="margin-bottom: 50px;">
+                Have a project in mind or just want to say hi? I'd love to hear from you.
+            </p>
+        </div>
+
+        <div class="glass-panel hidden-scroll" style="max-width: 600px; margin: 0 auto; padding: 40px;">
+            <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                {% csrf_token %}
+
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="color: var(--text-secondary); font-size: 0.9rem;">Name</label>
+                    <input type="text" placeholder="Your Name"
+                        style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 12px; border-radius: 8px; color: white; outline: none;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="color: var(--text-secondary); font-size: 0.9rem;">Email</label>
+                    <input type="email" placeholder="hello@example.com"
+                        style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 12px; border-radius: 8px; color: white; outline: none;">
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label style="color: var(--text-secondary); font-size: 0.9rem;">Message</label>
+                    <textarea rows="5" placeholder="Your message..."
+                        style="background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 12px; border-radius: 8px; color: white; outline: none; resize: vertical;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
