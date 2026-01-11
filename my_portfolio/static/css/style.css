@@ -230,7 +230,7 @@ nav.scrolled {
     bottom: -4px;
     left: 0;
     background-color: var(--accent-primary);
-    transition: width 0.3s ease;
+    transition: width var(--transition-fast);
 }
 
 .nav-links a:hover::after {
