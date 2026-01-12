@@ -3,11 +3,12 @@
 {% block title %}Home | My Portfolio{% endblock %}
 
 {% block content %}
-<section class="hero" style="height: 100vh; display: flex; align-items: center; position: relative;">
-    <div class="container">
+<section class="hero" style="height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="animate-fade-up">
-            <h5 style="color: var(--accent-primary); letter-spacing: 2px; text-transform: uppercase;">Hello, I'm a
-                Developer</h5>
+            <h5 style="color: var(--accent-primary); letter-spacing: 2px; text-transform: uppercase;">
+                I'm a <span id="typing-text"></span><span class="typing-cursor"></span>
+            </h5>
             <h1>Building <span class="text-gradient">Digital Experiences</span><br>That Matter.</h1>
             <p style="max-width: 600px; font-size: 1.1rem; margin-top: 20px;">
                 I craft beautiful, performant websites and applications using modern technologies.
@@ -21,8 +22,8 @@
     </div>
 
     <!-- Abstract Background Element -->
-    <div
-        style="position: absolute; top: 20%; right: 10%; width: 400px; height: 400px; background: var(--accent-primary); filter: blur(150px); opacity: 0.2; z-index: -1; border-radius: 50%;">
+    <div id="parallax-bg"
+        style="position: absolute; top: 20%; right: 10%; width: 400px; height: 400px; background: var(--accent-primary); filter: blur(150px); opacity: 0.2; z-index: 1; border-radius: 50%; transition: transform 0.1s ease-out;">
     </div>
 </section>
 
