@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import sys
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +28,7 @@ sys.path.append(str(BASE_DIR / 'apps'))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-&amp;ready#)@5l+9z8-^@5l+9z8-^@5l+9z8-^@5l+9z8-^@5l+9z8-^@5l+9z8-^')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ['*']
 
@@ -126,6 +127,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Media files
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

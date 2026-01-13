@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Updates | My Portfolio{% endblock %}
 
@@ -14,18 +15,34 @@
             {% if updates %}
             {% for update in updates %}
             <article class="glass-panel hidden-scroll"
-                style="padding: 30px; margin-bottom: 30px; display: flex; gap: 20px; align-items: flex-start;">
-                <div
-                    style="min-width: 80px; text-align: center; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 10px;">
-                    <span style="display: block; font-size: 1.5rem; font-weight: 700; color: var(--accent-primary);">{{
-                        update.timestamp|date:"d" }}</span>
-                    <span style="display: block; font-size: 0.8rem; text-transform: uppercase;">{{
-                        update.timestamp|date:"M" }}</span>
+                style="padding: 20px; margin-bottom: 40px; border-radius: 16px; overflow: hidden;">
+
+                <!-- Full Width Image -->
+                <div style="width: 100%; margin-bottom: 20px; border-radius: 12px; overflow: hidden;">
+                    {% if update.image %}
+                    <img src="{{ update.image.url }}" alt="{{ update.title }}"
+                        style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;">
+                    {% else %}
+                    <img src="{% static 'images/update_bg.png' %}" alt="Update"
+                        style="width: 100%; height: auto; display: block; transition: transform 0.5s ease;">
+                    {% endif %}
                 </div>
-                <div>
-                    <h2 style="font-size: 1.5rem; margin-bottom: 10px;">{{ update.title }}</h2>
-                    <p style="margin-bottom: 0;">{{ update.content }}</p>
+
+                <!-- Content -->
+                <div style="padding: 0 10px;">
+                    <!-- Date -->
+                    <div
+                        style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px; font-weight: 500; letter-spacing: 0.5px;">
+                        {{ update.timestamp|date:"F d, Y" }}
+                    </div>
+
+                    <!-- Title -->
+                    <h2 style="font-size: 1.8rem; margin-bottom: 15px;">{{ update.title }}</h2>
+
+                    <!-- Text -->
+                    <p style="margin-bottom: 10px; line-height: 1.7;">{{ update.content }}</p>
                 </div>
+
             </article>
             {% endfor %}
             {% else %}
