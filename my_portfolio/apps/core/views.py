@@ -1,7 +1,13 @@
 from django.shortcuts import render
+from .models import Skill
 
 def home(request):
-    return render(request, 'core/home.html')
+    skills = Skill.objects.all()
+    # Optional: You might want to pre-group them here or just pass all
+    context = {
+        'skills': skills,
+    }
+    return render(request, 'core/home.html', context)
 
 def projects(request):
     return render(request, 'core/projects.html')
