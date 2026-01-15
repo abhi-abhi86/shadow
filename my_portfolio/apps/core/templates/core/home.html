@@ -20,9 +20,37 @@
         </div>
     </div>
 
+
     <!-- Abstract Background Element -->
     <div
         style="position: absolute; top: 20%; right: 10%; width: 400px; height: 400px; background: var(--accent-primary); filter: blur(150px); opacity: 0.2; z-index: -1; border-radius: 50%;">
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section style="padding: 100px 0; background-color: rgba(255, 255, 255, 0.02);">
+    <div class="container">
+        <h2 class="hidden-scroll">Technical Skills</h2>
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 50px;">
+            {% for skill in skills %}
+            <div class="glass-panel hidden-scroll"
+                style="padding: 20px; text-align: center; transition: transform 0.3s ease;">
+                {% if skill.icon_class %}
+                <i class="{{ skill.icon_class }}"
+                    style="font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 15px; display: block;"></i>
+                {% endif %}
+                <h4 style="font-size: 1.1rem; margin-bottom: 15px;">{{ skill.name }}</h4>
+                <div style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 3px; overflow: hidden;">
+                    <div
+                        style="width: {{ skill.proficiency }}%; height: 100%; background: var(--accent-primary); border-radius: 3px;">
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p class="hidden-scroll">No skills added yet.</p>
+            {% endfor %}
+        </div>
     </div>
 </section>
 
