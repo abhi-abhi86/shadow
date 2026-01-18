@@ -53,7 +53,6 @@ A modern, Django-based portfolio application designed to showcase projects, upda
     python my_portfolio/manage.py runserver
     ```
 
-    Open [http://127.0.0.1:8000](http://127.0.0.1:8000) to view the application.
 
 ## 📂 Project Structure
 
