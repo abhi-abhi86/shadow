@@ -23,7 +23,7 @@ A modern, Django-based portfolio application designed to showcase projects, upda
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone <https://github.com/abhi-abhi86/shadow.git>
     cd shadow
     ```
 
